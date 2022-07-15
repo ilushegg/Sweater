@@ -12,14 +12,25 @@
     <a class="btn btn-primary mt-5" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
         Add New Message
       </a>
-    <div class="collapse mt-3" id="collapseExample">
+    <div class="collapse <#if message??>show</#if> mt-3" id="collapseExample">
         <form class="row row-cols-lg-auto g-3 align-items-center" method="post" enctype="multipart/form-data">
         <div class = "col-12">
-            <input class="form-control" type="text" name="text" placeholder="Add a message"/>
-        </div>
+                    <input class="form-control ${(textError??)?string('is-invalid', '')}" type="text" name="text" placeholder="Add a message" value="<#if message??>${message.text}</#if>"/>
+                    <#if textError??>
+                    <div class="invalid-feedback">
+                              ${textError}
+                            </div>
+                    </#if>
+                </div>
         <div class = "col-12">
-            <input class="form-control" type="text" name="tag" placeholder="Tag">
-        </div>
+                    <input class="form-control ${(tagError??)?string('is-invalid', '')}" type="text" name="text" placeholder="Tag" value="<#if message??>${message.tag}</#if>"/>
+                    <#if tagError??>
+                    <div class="invalid-feedback">
+                              ${tagError}
+                            </div>
+                    </#if>
+                </div>
+
         <div class = "col-12">
             <input class="form-control" type="file" name="file">
         </div>
