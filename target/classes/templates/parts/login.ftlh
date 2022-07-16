@@ -43,7 +43,7 @@
 
           <br/>
 
-        
+
     </#if>
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
     <#if !isRegisterForm>
