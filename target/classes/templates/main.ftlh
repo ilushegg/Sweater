@@ -23,7 +23,7 @@
                     </#if>
                 </div>
         <div class = "col-12">
-                    <input class="form-control ${(tagError??)?string('is-invalid', '')}" type="text" name="text" placeholder="Tag" value="<#if message??>${message.tag}</#if>"/>
+                    <input class="form-control ${(tagError??)?string('is-invalid', '')}" type="tag" name="tag" placeholder="Tag" value="<#if message??>${message.tag?ifExists}</#if>"/>
                     <#if tagError??>
                     <div class="invalid-feedback">
                               ${tagError}

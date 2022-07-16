@@ -38,6 +38,13 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="b596365a-253a-416a-a59e-4ef659287dcf" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="b596365a-253a-416a-a59e-4ef659287dcf" dataset="sweater.message" active-filter-id="EMPTY_FILTER">
+      <filter id="b22c9da5-7db9-498f-aece-b14ba7378760" name="1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="1" active="true" />
+      </filter>
+    </filter-actions>
+  </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>
