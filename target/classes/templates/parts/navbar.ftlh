@@ -28,6 +28,8 @@
       </ul>
     </div>
     <div class="navbar-text me-3">${name}</div>
+    <#if user??>
     <@l.logout />
+    </#if>
   </div>
 </nav>
