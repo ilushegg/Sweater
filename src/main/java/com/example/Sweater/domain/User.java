@@ -18,8 +18,6 @@ public class User implements UserDetails{
     @NotBlank(message = "Username cannot be empty")
     private String username;
     private String password;
-    @Transient
-    private String password2;
     private boolean active;
     @NotBlank(message = "Email cannot be empty")
     @Email(message = "Email is not correct")
@@ -115,11 +113,5 @@ public class User implements UserDetails{
         this.activationCode = activationCode;
     }
 
-    public String getPassword2() {
-        return password2;
-    }
 
-    public void setPassword2(String password2) {
-        this.password2 = password2;
-    }
 }

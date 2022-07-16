@@ -32,6 +32,18 @@
                                                   ${emailError}
                                                 </div>
                                         </#if></div>
+
+          <div class="g-recaptcha" data-sitekey="6LehJ_UgAAAAANv-E93kwPRAfk-rM6T0DlhI45YE">
+          </div>
+          <#if captchaError??>
+          <div class="alert alert-danger" role="alert">
+              ${captchaError}
+          </div>
+          </#if>
+
+          <br/>
+
+
     </#if>
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
     <#if !isRegisterForm>
