@@ -12,9 +12,14 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        <#if user??>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/main">Messages</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/user-messages/${currentUserId}">My messages</a>
+        </li>
+        </#if>
         <#if isAdmin>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/user">Users</a>
