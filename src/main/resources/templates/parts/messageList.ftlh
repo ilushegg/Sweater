@@ -1,6 +1,9 @@
 <#include "security.ftlh">
+<#import "pager.ftlh" as p>
+    <@p.pager url page />
 <div class="row row-cols-1 row-cols-md-3 g-4 my-3">
-    <#list messages as message>
+
+    <#list page.content as message>
 
     <div class="col">
     <div class="card my-3" style="width: 18rem;">
